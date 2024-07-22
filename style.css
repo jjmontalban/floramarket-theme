@@ -1,0 +1,164 @@
+/*
+Theme Name:   	Floramarket Theme
+Theme URI:    	https://jjmontalban.github.io
+Author:       	JJMontalban
+Author URI:     https://jjmontalban.github.io
+Template:     	storefront
+Description:  	Tema hijo basado en Storefront
+Version:      	1.0.0
+License:      	GNU General Public License v2 or later
+License URI:  	http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain:  	floramarket
+License:        GPL v2 or later
+*/
+
+/* --------------- CSS Personalizado ----------------- */
+
+
+
+/* Ocultar forms de cupones de descuento */
+.woocommerce-form-coupon-toggle,
+.page-id-7 .coupon {
+
+    display: none !important;
+}
+
+
+/* Centrar botones de cantidades en pagina de categorias */ 
+.tax-product_cat li.product.type-product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* botones cantidad y añadir al carrito en pagiona deproducto (productos relacionados) */
+body .qib-button-wrapper {
+	display: contents;
+	padding-bottom: 15px;
+}
+
+.single-product ul.products li.product .button {
+	margin-top: 2%;
+}
+
+
+/* Modificar asapecto footer */ 
+.site-info {
+    text-align: center;
+    width: 100%;
+}
+
+
+/* Estilos para la topbar */
+#topbar {
+    background-color: #09ab8c;
+    color: #fff; 
+    padding: 10px 0;
+    text-align: center;
+}
+
+#topbar-navigation {
+    text-align: center;
+}
+
+#topbar-navigation .topbar-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#topbar-navigation .topbar-menu li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+#topbar-navigation .topbar-menu li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#topbar-navigation .topbar-menu li a:hover {
+    text-decoration: underline;
+}
+
+
+/* Ocultar sidebar en version movil */
+@media (max-width: 768px) {
+    #content-wrapper {
+        flex-direction: column;
+    }
+    #sidebar {
+        display: none;
+    }
+    #primary {
+        width: 100% !important;
+    }
+}
+
+
+/* categorias en el sidebar */
+.wp-block-woocommerce-product-categories{
+    background-color: #EDEDED;
+    padding: 2% 2% 2% 2%;
+	margin-right: 10%;
+}
+
+.wp-block-woocommerce-product-categories a {
+	color: #333;
+}
+
+.wp-block-woocommerce-product-categories li{
+    list-style: none;
+}
+
+.wp-block-woocommerce-product-categories ul{
+    margin: 0 0 1.41575em 2em;
+}
+
+
+/* Estilo básico para los campos select */
+/* .woocommerce form .form-row select,
+.woocommerce-page form .form-row select {
+    background-color: #f2f2f2 !important;
+    color: #43454b !important;
+    border: 0 !important;
+    -webkit-appearance: none !important;
+    box-sizing: border-box !important;
+    font-weight: 400 !important;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .125) !important;
+    height: 40px !important;
+    line-height: 19px !important;
+} */
+
+/* Cambiar el color del borde al seleccionar */
+/* .woocommerce form .form-row select:focus,
+.woocommerce-page form .form-row select:focus {
+border: 1px solid #09ab8c !important; 
+box-shadow: 0 0 0 1px #09ab8c !important; 
+outline: none !important; 
+} */
+
+
+
+/* Estilos consistentes para los selects de país y estado */
+.select2-container--default .select2-selection--single {
+    padding: 1.4em;
+    border-radius: 0;
+    background-color: #f2f2f2;
+    color: #43454b;
+    border: 0;
+    -webkit-appearance: none;
+    box-sizing: border-box;
+    font-weight: 400;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .125);
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    margin-top: -11px;
+}
+
+.woocommerce-checkout #billing_cif_field .description {
+   display: none !important;
+}
